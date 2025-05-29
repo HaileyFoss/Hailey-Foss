@@ -1,0 +1,132 @@
+/* Smooth Scroll Setup */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+#smooth-wrapper {
+    min-height: 100vh;
+}
+
+#smooth-content {
+    will-change: transform;
+}
+
+/* Projects Page Styles */
+
+.projects-hero {
+    padding: 120px 0 60px;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 1));
+}
+
+.projects-hero .hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.projects-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.projects-hero p {
+    font-size: 18px;
+    color: #ddd;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Project Grid */
+.projects-grid {
+    padding: 80px 0;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.3s ease-in-out;
+    will-change: transform;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    padding-top: 60%;
+}
+
+.project-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.project-content p {
+    color: #bbb;
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-tags {
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(255, 76, 76, 0.1);
+    color: #ff4c4c;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .projects-hero {
+        padding: 100px 0 50px;
+    }
+    
+    .projects-hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .projects-hero h1 {
+        font-size: 32px;
+    }
+    
+    .project-content {
+        padding: 20px;
+    }
+} 

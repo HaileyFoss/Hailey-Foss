@@ -1,0 +1,877 @@
+/* Case Study Page Styles */
+
+.case-study-hero {
+    padding: 120px 0 60px;
+    position: relative;
+    background: none;
+    overflow: hidden;
+}
+
+
+.case-study-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 1));
+    z-index: 2;
+}
+
+.case-study-hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+.project-category {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(255, 76, 76, 0.1);
+    color: #ff4c4c;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.case-study-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.case-study-hero .lead {
+    font-size: 20px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Project Overview */
+.project-overview {
+    padding: 80px 0;
+}
+
+.overview-content h2,
+.challenges h2,
+.research h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.overview-content h3 {
+    font-size: 24px;
+    color: #ff4c4c;
+    margin-bottom: 15px;
+}
+
+.overview-content p {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.overview-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.overview-content ul li {
+    color: #bbb;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.overview-content ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #ff4c4c;
+}
+
+/* Project Meta */
+.project-meta {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.meta-item {
+    margin-bottom: 25px;
+}
+
+.meta-item:last-child {
+    margin-bottom: 0;
+}
+
+.meta-item h4 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.tech-tags span {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(255, 76, 76, 0.1);
+    color: #ff4c4c;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/* Challenges Section */
+.challenge-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0;
+    border-radius: 8px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.challenge-image {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.challenge-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.challenge-card:hover .challenge-img {
+    transform: scale(1.05);
+}
+
+.challenge-content {
+    padding: 30px;
+}
+
+.challenge-card h3 {
+    font-size: 24px;
+    color: #ff4c4c;
+    margin-bottom: 20px;
+}
+
+.challenge-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.challenge-card ul li {
+    color: #bbb;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.challenge-card ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff4c4c;
+}
+
+/* Research Section */
+.research-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.competitive-analysis h3,
+.tech-stack h3 {
+    font-size: 24px;
+    color: #ff4c4c;
+    margin-bottom: 20px;
+}
+
+.competitor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.competitor-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.competitor-image {
+    position: relative;
+    width: 100%;
+    padding-top: 120%; /* Extra tall aspect ratio */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.competitor-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.competitor-card:hover .competitor-img {
+    transform: scale(1.05);
+}
+
+.competitor-content {
+    padding: 20px;
+}
+
+.competitor-card h4 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.competitor-card p {
+    color: #bbb;
+    font-size: 14px;
+    margin: 0;
+}
+
+.tech-details {
+    margin-top: 20px;
+}
+
+.tech-section h4 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.tech-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tech-section ul li {
+    color: #bbb;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.tech-section ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #ff4c4c;
+}
+
+/* Design Process Section */
+.design-process {
+    padding: 80px 0;
+}
+
+.process-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.wireframe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.wireframe-item {
+    height: 600px; /* Increased height */
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.placeholder-image {
+    background: rgba(255, 76, 76, 0.1);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.placeholder-image span {
+    color: #ff4c4c;
+    font-size: 14px;
+}
+
+.wireframe-item p {
+    color: #bbb;
+    font-size: 14px;
+    margin: 0;
+}
+
+.wireframe-item img {
+    width: 100%;
+    height: 550px; /* Increased height, leaving space for caption */
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.key-improvements,
+.collaboration {
+    margin-top: 120px;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.key-improvements h3,
+.collaboration h3 {
+    font-size: 24px;
+    color: #ff4c4c;
+    margin-bottom: 30px;
+}
+
+.key-improvements ul,
+.collaboration ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.key-improvements ul li,
+.collaboration ul li {
+    color: #bbb;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.key-improvements ul li:before,
+.collaboration ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #ff4c4c;
+}
+
+.collaboration p {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Add spacing between wireframes and these sections */
+.wireframes {
+    margin-bottom: 120px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Results & Impact Section */
+.results-impact {
+    padding: 80px 0;
+}
+
+.results-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.metric-card h4 {
+    color: #ff4c4c;
+    margin-bottom: 15px;
+}
+
+.metric-placeholder {
+    color: #bbb;
+    font-style: italic;
+    padding: 20px;
+    background: rgba(255, 76, 76, 0.1);
+    border-radius: 4px;
+}
+
+.feedback-content p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.feedback-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.feedback-content ul li {
+    color: #bbb;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.feedback-content ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ff4c4c;
+}
+
+.testimonials-placeholder {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.placeholder-text {
+    color: #bbb;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Color Palette Section */
+.palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.palette-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.palette-image {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* Changed to 4:3 aspect ratio for better image fitting */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.palette-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Changed to contain to prevent cropping */
+    transform: translate(-50%, -50%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.palette-card:hover .palette-img {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.palette-content {
+    padding: 30px;
+}
+
+.palette-content h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.color-swatches {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.color-swatch {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.palette-content p {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Web References Section */
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.reference-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.reference-image {
+    position: relative;
+    width: 100%;
+    padding-top: 120%; /* Extra tall aspect ratio */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.reference-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reference-card:hover .reference-img {
+    transform: scale(1.05);
+}
+
+.reference-content {
+    padding: 25px;
+}
+
+.reference-content h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.reference-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reference-content ul li {
+    color: #bbb;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.reference-content ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #ff4c4c;
+}
+
+/* Before & After Section */
+.before-after-section {
+    padding: 80px 0;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.comparison-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.comparison-card:hover {
+    transform: translateY(-5px);
+}
+
+.comparison-image {
+    position: relative;
+    width: 100%;
+    padding-top: 160%; /* Extra tall aspect ratio for full website screenshots */
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.comparison-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comparison-content {
+    padding: 30px;
+}
+
+.comparison-content h3 {
+    font-size: 24px;
+    color: #ff4c4c;
+    margin-bottom: 20px;
+}
+
+.comparison-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comparison-content ul li {
+    color: #bbb;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.comparison-content ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #ff4c4c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .competitor-grid,
+    .references-grid,
+    .wireframe-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
+    .wireframe-item {
+        height: 500px;
+    }
+    
+    .wireframe-img {
+        height: 450px;
+    }
+    
+    .key-improvements,
+    .collaboration {
+        margin-top: 100px;
+        padding: 50px;
+    }
+    
+    .wireframes {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    .case-study-hero {
+        padding: 100px 0 50px;
+    }
+    
+    .case-study-hero h1 {
+        font-size: 40px;
+    }
+    
+    .research-content {
+        padding: 30px;
+    }
+    
+    .process-content,
+    .results-content {
+        padding: 30px;
+    }
+    
+    .wireframe-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wireframe-item {
+        height: 450px;
+    }
+    
+    .wireframe-img {
+        height: 400px;
+    }
+    
+    .competitor-image,
+    .reference-image {
+        padding-top: 100%; /* Square aspect ratio for medium screens */
+    }
+    
+    .key-improvements,
+    .collaboration {
+        margin-top: 80px;
+        padding: 40px;
+    }
+    
+    .wireframes {
+        margin-bottom: 80px;
+    }
+    
+    .comparison-grid {
+        gap: 30px;
+    }
+    
+    .comparison-image {
+        padding-top: 140%; /* Slightly shorter on tablets */
+    }
+    
+    .comparison-content {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    .case-study-hero h1 {
+        font-size: 32px;
+    }
+    
+    .overview-content h2,
+    .challenges h2,
+    .research h2 {
+        font-size: 28px;
+    }
+    
+    .challenge-card {
+        margin-bottom: 20px;
+    }
+    
+    .research-content {
+        padding: 20px;
+    }
+    
+    .process-content,
+    .results-content {
+        padding: 20px;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .placeholder-image {
+        height: 150px;
+    }
+    
+    .challenge-image {
+        padding-top: 75%; /* 4:3 aspect ratio for mobile */
+    }
+    
+    .competitor-grid,
+    .references-grid,
+    .wireframe-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .competitor-image,
+    .reference-image {
+        padding-top: 100%; /* Maintain square aspect ratio for mobile */
+    }
+    
+    .wireframe-item {
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    
+    .wireframe-img {
+        height: 350px;
+    }
+    
+    .palette-grid,
+    .reference-content {
+        padding: 20px;
+    }
+    
+    .palette-image {
+        padding-top: 66.67%; /* 3:2 aspect ratio for mobile */
+    }
+    
+    .color-swatch {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .reference-content {
+        padding: 20px;
+    }
+    
+    .key-improvements,
+    .collaboration {
+        margin-top: 60px;
+        padding: 30px;
+    }
+    
+    .wireframes {
+        margin-bottom: 60px;
+        padding-bottom: 30px;
+    }
+    
+    .key-improvements ul li,
+    .collaboration ul li {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .comparison-image {
+        padding-top: 160%; /* Back to full height on mobile */
+    }
+    
+    .comparison-content {
+        padding: 20px;
+    }
+    
+    .comparison-content h3 {
+        font-size: 20px;
+    }
+    
+    .comparison-content ul li {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+} 
